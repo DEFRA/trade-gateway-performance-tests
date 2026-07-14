@@ -1,0 +1,29 @@
+{
+  "name": "trade-gateway-performance-tests",
+  "version": "0.6.0",
+  "description": "Performance tests for Trade Gateway services.",
+  "license": "OGL-UK-3.0",
+  "author": "Defra DDTS",
+  "scripts": {
+    "format": "npx prettier --write 'src/**/*.js' '**/*.{js,md,json,config.js}'",
+    "format:check": "npx prettier --check 'src/**/*.js' '**/*.{js,md,json,config.js}'",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "prepare": "npx husky",
+    "pretest": "npx rimraf reports && npx mkdirp reports",
+    "test": "k6 run src/tests/main.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/k6": "^2.0.0",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "k6": "^0.0.0",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.9.5",
+    "rimraf": "^6.1.3"
+  }
+}
